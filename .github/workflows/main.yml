@@ -1,0 +1,16 @@
+name: Simple HTML Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print message
+        run: echo "🚀 GitHub Action ran! Your HTML project was updated."
